@@ -1,0 +1,89 @@
+{
+  "welcome": {
+    "title": "Bienvenido a Mini Desk",
+    "subtitle": "Tu tienda favorita con artículos de la mejor calidad.",
+    "cta": "Ir a la tienda"
+  },
+  "nav": {
+    "shop": "Tienda",
+    "cart": "Carrito",
+    "settings": "Ajustes",
+    "productDetail": "Detalle del producto",
+    "checkout": "Finalizar compra",
+    "success": "Confirmación"
+  },
+  "shop": {
+    "title": "Catálogo",
+    "allCategories": "Todas",
+    "loadingMore": "Cargando más...",
+    "retry": "Reintentar",
+    "offlineNotice": "Sin conexión. Mostrando datos guardados."
+  },
+  "product": {
+    "addToCart": "Agregar al carrito",
+    "inCart": "En el carrito",
+    "reviews": "{{count}} reseñas",
+    "notFound": "Producto no encontrado",
+    "backToCatalog": "Volver al catálogo"
+  },
+  "cart": {
+    "title": "Tu Carrito",
+    "emptyTitle": "Tu carrito está vacío",
+    "emptyDescription": "Explora nuestro catálogo y agrega tus productos favoritos.",
+    "exploreProducts": "Explorar productos",
+    "subtotal": "Subtotal",
+    "shipping": "Envío",
+    "shippingFree": "Gratis",
+    "total": "Total",
+    "checkoutAction": "Continuar al pago",
+    "removeConfirmTitle": "¿Eliminar artículo?",
+    "removeConfirmMessage": "¿Deseas quitar este artículo de tu carrito?",
+    "cancel": "Cancelar",
+    "remove": "Eliminar",
+    "itemCount_one": "{{count}} artículo",
+    "itemCount_other": "{{count}} artículos"
+  },
+  "checkout": {
+    "title": "Detalles del Pago",
+    "mockNotice": "⚠️ Modo simulación: no introduzcas información bancaria real.",
+    "fullName": "Nombre completo",
+    "fullNamePlaceholder": "Juan Pérez",
+    "cardNumber": "Número de tarjeta",
+    "cardNumberPlaceholder": "0000 0000 0000 0000",
+    "expiration": "Expiración",
+    "expirationPlaceholder": "MM/AA",
+    "cvv": "CVV",
+    "cvvPlaceholder": "123",
+    "summaryTitle": "Resumen del pedido",
+    "confirmPayment": "Confirmar Pago",
+    "processing": "Procesando pago..."
+  },
+  "success": {
+    "title": "¡Pago completado con éxito!",
+    "subtitle": "Tu orden ha sido procesada correctamente y está siendo preparada.",
+    "orderNumber": "Número de orden",
+    "totalPaid": "Total pagado",
+    "estimatedDelivery": "Entrega estimada",
+    "backToCatalog": "Volver a la tienda"
+  },
+  "settings": {
+    "title": "Ajustes",
+    "language": "Idioma",
+    "currency": "Moneda",
+    "rateNotice": "1 USD ≈ {{rate}} MXN (tipo de cambio)",
+    "version": "Versión de la aplicación"
+  },
+  "errors": {
+    "network": "Error de conexión. Verifica tu internet.",
+    "timeout": "El servidor tardó demasiado en responder.",
+    "notFound": "El recurso solicitado no fue encontrado.",
+    "server": "Error interno del servidor. Intenta de nuevo más tarde.",
+    "unknown": "Ocurrió un error inesperado."
+  },
+  "categories": {
+    "men's clothing": "Ropa de hombre",
+    "women's clothing": "Ropa de mujer",
+    "jewelery": "Joyería",
+    "electronics": "Electrónica"
+  }
+}

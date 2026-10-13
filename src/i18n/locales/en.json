@@ -1,0 +1,89 @@
+{
+  "welcome": {
+    "title": "Welcome to Mini Desk",
+    "subtitle": "Your favorite store with top-notch curated essentials.",
+    "cta": "Go to Store"
+  },
+  "nav": {
+    "shop": "Shop",
+    "cart": "Cart",
+    "settings": "Settings",
+    "productDetail": "Product Detail",
+    "checkout": "Checkout",
+    "success": "Success"
+  },
+  "shop": {
+    "title": "Catalog",
+    "allCategories": "All",
+    "loadingMore": "Loading more...",
+    "retry": "Retry",
+    "offlineNotice": "Offline. Showing cached catalog."
+  },
+  "product": {
+    "addToCart": "Add to Cart",
+    "inCart": "In Cart",
+    "reviews": "{{count}} reviews",
+    "notFound": "Product not found",
+    "backToCatalog": "Back to catalog"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "emptyTitle": "Your cart is empty",
+    "emptyDescription": "Explore our catalog and add your favorite essentials.",
+    "exploreProducts": "Explore products",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "shippingFree": "Free",
+    "total": "Total",
+    "checkoutAction": "Proceed to Payment",
+    "removeConfirmTitle": "Remove item?",
+    "removeConfirmMessage": "Do you want to remove this item from your cart?",
+    "cancel": "Cancel",
+    "remove": "Remove",
+    "itemCount_one": "{{count}} item",
+    "itemCount_other": "{{count}} items"
+  },
+  "checkout": {
+    "title": "Payment Details",
+    "mockNotice": "⚠️ Mock mode: do not enter real financial information.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "John Doe",
+    "cardNumber": "Card Number",
+    "cardNumberPlaceholder": "0000 0000 0000 0000",
+    "expiration": "Expiration",
+    "expirationPlaceholder": "MM/YY",
+    "cvv": "CVV",
+    "cvvPlaceholder": "123",
+    "summaryTitle": "Order Summary",
+    "confirmPayment": "Confirm Payment",
+    "processing": "Processing payment..."
+  },
+  "success": {
+    "title": "Payment Completed!",
+    "subtitle": "Your order was successfully processed and is on its way.",
+    "orderNumber": "Order Number",
+    "totalPaid": "Total Paid",
+    "estimatedDelivery": "Estimated Delivery",
+    "backToCatalog": "Back to Catalog"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "currency": "Currency",
+    "rateNotice": "1 USD ≈ {{rate}} MXN (exchange rate)",
+    "version": "App Version"
+  },
+  "errors": {
+    "network": "Connection error. Please check your internet.",
+    "timeout": "Server took too long to respond.",
+    "notFound": "Requested resource was not found.",
+    "server": "Internal server error. Please try again later.",
+    "unknown": "An unexpected error occurred."
+  },
+  "categories": {
+    "men's clothing": "Men's Clothing",
+    "women's clothing": "Women's Clothing",
+    "jewelery": "Jewelery",
+    "electronics": "Electronics"
+  }
+}
