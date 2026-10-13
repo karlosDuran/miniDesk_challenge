@@ -1,0 +1,15 @@
+import { useEffect } from 'react';
+import { AppState, AppStateStatus, Platform } from 'react-native';
+import { focusManager } from '@tanstack/react-query';
+
+export function useAppStateFocus() {
+  useEffect(() => {
+    if (Platform.OS === 'web') return;
+
+    const subscription = AppState.addEventListener('change', (status: AppStateStatus) => {
+      focusManager.setFocused(status === 'active');
+    });
+
+    return () => subscription.remove();
+  }, []);
+}
