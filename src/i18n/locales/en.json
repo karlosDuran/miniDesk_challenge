@@ -17,7 +17,9 @@
     "allCategories": "All",
     "loadingMore": "Loading more...",
     "retry": "Retry",
-    "offlineNotice": "Offline. Showing cached catalog."
+    "offlineNotice": "Offline. Showing cached catalog.",
+    "itemCount_one": "{{count}} product",
+    "itemCount_other": "{{count}} products"
   },
   "product": {
     "addToCart": "Add to Cart",

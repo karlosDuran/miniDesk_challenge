@@ -17,7 +17,9 @@
     "allCategories": "Todas",
     "loadingMore": "Cargando más...",
     "retry": "Reintentar",
-    "offlineNotice": "Sin conexión. Mostrando datos guardados."
+    "offlineNotice": "Sin conexión. Mostrando datos guardados.",
+    "itemCount_one": "{{count}} producto",
+    "itemCount_other": "{{count}} productos"
   },
   "product": {
     "addToCart": "Agregar al carrito",
