@@ -6,6 +6,7 @@ import { colors, radius, spacing } from '@/theme';
 import { Product } from '@/api/types';
 import { useTranslation } from 'react-i18next';
 import { useFormatPrice } from '@/features/preferences/hooks/useFormatPrice';
+import { QuantityStepper } from '@/features/cart';
 
 interface ProductCardProps {
   product: Product;
@@ -26,52 +27,60 @@ export const ProductCard = React.memo(function ProductCard({
   );
 
   return (
-    <Pressable
-      style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}
-      onPress={() => onPress(product)}
-      accessibilityRole="button"
-      accessibilityLabel={`${product.title}, ${formatPrice(product.price)}`}
-    >
-      <View style={styles.imageContainer}>
-        <Image
-          source={{ uri: product.image }}
-          style={styles.image}
-          contentFit="contain"
-          transition={200}
-        />
-        <View style={styles.ratingBadge}>
-          <Text variant="caption" style={styles.ratingText}>
-            ★ {product.rating.rate.toFixed(1)}
+    <View style={styles.card}>
+      {/* Área interactiva para navegar al detalle del producto */}
+      <Pressable
+        style={({ pressed }) => [styles.touchableArea, pressed && styles.touchablePressed]}
+        onPress={() => onPress(product)}
+        accessibilityRole="button"
+        accessibilityLabel={`${product.title}, ${formatPrice(product.price)}`}
+      >
+        <View style={styles.imageContainer}>
+          <Image
+            source={{ uri: product.image }}
+            style={styles.image}
+            contentFit="contain"
+            transition={200}
+          />
+          <View style={styles.ratingBadge}>
+            <Text variant="caption" style={styles.ratingText}>
+              ★ {product.rating.rate.toFixed(1)}
+            </Text>
+          </View>
+        </View>
+
+        <View style={styles.info}>
+          <Text
+            variant="caption"
+            color={colors.textMuted}
+            numberOfLines={1}
+            style={styles.category}
+          >
+            {translatedCategory.toUpperCase()}
+          </Text>
+
+          <Text
+            variant="bodySmall"
+            color={colors.text}
+            numberOfLines={2}
+            style={styles.title}
+          >
+            {product.title}
           </Text>
         </View>
-      </View>
+      </Pressable>
 
-      <View style={styles.info}>
-        <Text
-          variant="caption"
-          color={colors.textMuted}
-          numberOfLines={1}
-          style={styles.category}
-        >
-          {translatedCategory.toUpperCase()}
+      {/* Footer independiente con el precio y los controles de cantidad (+ / −) */}
+      <View style={styles.footerRow}>
+        <Text variant="titleSmall" color={colors.primary} style={styles.price}>
+          {formatPrice(product.price)}
         </Text>
 
-        <Text
-          variant="bodySmall"
-          color={colors.text}
-          numberOfLines={2}
-          style={styles.title}
-        >
-          {product.title}
-        </Text>
-
-        <View style={styles.priceRow}>
-          <Text variant="titleSmall" color={colors.primary}>
-            {formatPrice(product.price)}
-          </Text>
+        <View style={styles.stepperWrapper}>
+          <QuantityStepper product={product} size="sm" />
         </View>
       </View>
-    </Pressable>
+    </View>
   );
 });
 
@@ -89,14 +98,17 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.05,
     shadowRadius: 3,
     elevation: 2,
+    justifyContent: 'space-between',
   },
-  cardPressed: {
-    opacity: 0.88,
-    transform: [{ scale: 0.98 }],
+  touchableArea: {
+    borderRadius: radius.sm,
+  },
+  touchablePressed: {
+    opacity: 0.85,
   },
   imageContainer: {
     width: '100%',
-    height: 140,
+    height: 130,
     backgroundColor: '#FFFFFF',
     borderRadius: radius.sm,
     justifyContent: 'center',
@@ -135,7 +147,20 @@ const styles = StyleSheet.create({
     lineHeight: 16,
     marginBottom: spacing.xs,
   },
-  priceRow: {
-    marginTop: 2,
+  footerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingTop: spacing.xs,
+    borderTopWidth: 1,
+    borderTopColor: colors.borderLight,
+    marginTop: spacing.xs,
+  },
+  price: {
+    flex: 1,
+    fontSize: 13,
+  },
+  stepperWrapper: {
+    marginLeft: spacing.xs,
   },
 });
